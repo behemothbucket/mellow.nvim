@@ -282,7 +282,7 @@ local set_groups = function()
     ["HopPreview"] = { fg = c.bright_blue },
 
     -- Flash
-    ["FlashLabel"] = { fg = c.cyan },
+    ["FlashLabel"] = { fg = c.blue },
 
     -- Cmp
     ["CmpItemAbbrDeprecated"] = { fg = c.gray06, strikethrough = true },

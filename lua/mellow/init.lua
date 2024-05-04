@@ -283,7 +283,7 @@ local set_groups = function()
 
     -- Flash
     ["FlashMatch"] = { fg = c.bright_yellow },
-    ["FlashLabel"] = { fg = c.blue, bg = c.bg_dark },
+    ["FlashLabel"] = { fg = c.blue, bg = c.black },
 
     -- Cmp
     ["CmpItemAbbrDeprecated"] = { fg = c.gray06, strikethrough = true },

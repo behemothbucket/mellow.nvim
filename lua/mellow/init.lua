@@ -89,11 +89,11 @@ local set_groups = function()
     ["Normal"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text
     ["NormalNC"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg_dark }, -- normal text
     -- ["NormalFloat"] = { fg = c.white, bg = c.gray00 }, -- Normal text in floating windows.
-    ["NormalFloat"] = { fg = c.white, bg = c.none }, -- Normal text in floating windows.
+    ["NormalFloat"] = { fg = c.white, bg = cfg.transparent and c.none or c.bg }, -- Normal text in floating windows.
     -- ["FloatBorder"] = { fg = c.gray03, bg = c.bg }, -- Border of floating windows.
-    ["FloatBorder"] = { fg = c.gray03, bg = c.none }, -- Border of floating windows.
+    ["FloatBorder"] = { fg = c.gray03, bg = cfg.transparent and c.none or c.bg }, -- Border of floating windows.
     -- ["Pmenu"] = { fg = c.white, bg = c.black }, -- Popup menu: normal item.
-    ["Pmenu"] = { fg = c.white, bg = c.none }, -- Popup menu: normal item.
+    ["Pmenu"] = { fg = c.white, bg = cfg.transparent and c.none or c.bg }, -- Popup menu: normal item.
     ["PmenuSel"] = { fg = c.bright_white, bg = c.gray03 }, -- Popup menu: selected item.
     ["PmenuSbar"] = { bg = c.gray02 }, -- Popup menu: scrollbar.
     ["PmenuThumb"] = { bg = c.gray03 }, -- Popup menu: Thumb of the scrollbar.
@@ -118,7 +118,7 @@ local set_groups = function()
     ["VisualNOS"] = { bg = c.gray02 }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     ["WarningMsg"] = { fg = c.yellow }, -- warning messages
     -- ["WildMenu"] = { fg = c.black, bg = c.blue }, -- current match in 'wildmenu' completion
-    ["WildMenu"] = { fg = c.black, bg = c.none }, -- current match in 'wildmenu' completion
+    ["WildMenu"] = { fg = c.black, bg = cfg.transparent and c.none or c.bg }, -- current match in 'wildmenu' completion
     ["Winbar"] = { fg = c.white, bg = c.gray01 }, -- Winbar
     ["WinbarNC"] = { fg = c.gray05, bg = c.bg_dark }, -- Winbar non-current windows.
 
@@ -280,6 +280,9 @@ local set_groups = function()
     ["HopUnmatched"] = { fg = c.gray04 },
     ["HopCursor"] = { fg = c.bright_cyan },
     ["HopPreview"] = { fg = c.bright_blue },
+
+    -- Flash
+    ["FlashLabel"] = { fg = c.blue, underline = true },
 
     -- Cmp
     ["CmpItemAbbrDeprecated"] = { fg = c.gray06, strikethrough = true },

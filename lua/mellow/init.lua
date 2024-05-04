@@ -248,9 +248,9 @@ local set_groups = function()
     ["DiagnosticUnderlineWarn"] = { fg = c.yellow, underline = true },
     ["DiagnosticUnderlineInfo"] = { fg = c.blue, underline = true },
     ["DiagnosticUnderlineHint"] = { fg = c.cyan, underline = true },
-    ["DiagnosticVirtualTextWarn"] = { bg = c.none },
-    ["DiagnosticVirtualTextOk"] = { bg = c.none },
-    ["DiagnosticVirtualTextInfo"] = { bg = c.none },
+    -- ["DiagnosticVirtualTextWarn"] = { bg = c.none },
+    -- ["DiagnosticVirtualTextOk"] = { bg = c.none },
+    -- ["DiagnosticVirtualTextInfo"] = { bg = c.none },
 
     -- Neovim's built-in language server client
     ["LspReferenceWrite"] = { fg = c.blue, underline = true },

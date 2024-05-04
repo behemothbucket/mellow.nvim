@@ -89,11 +89,11 @@ local set_groups = function()
     ["Normal"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text
     ["NormalNC"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg_dark }, -- normal text
     -- ["NormalFloat"] = { fg = c.white, bg = c.gray00 }, -- Normal text in floating windows.
-    ["NormalFloat"] = { fg = c.white, bg = "none" }, -- Normal text in floating windows.
+    ["NormalFloat"] = { fg = c.white, bg = c.none }, -- Normal text in floating windows.
     -- ["FloatBorder"] = { fg = c.gray03, bg = c.bg }, -- Border of floating windows.
-    ["FloatBorder"] = { fg = c.gray03, bg = "none" }, -- Border of floating windows.
+    ["FloatBorder"] = { fg = c.gray03, bg = c.none }, -- Border of floating windows.
     -- ["Pmenu"] = { fg = c.white, bg = c.black }, -- Popup menu: normal item.
-    ["Pmenu"] = { fg = c.white, bg = "none" }, -- Popup menu: normal item.
+    ["Pmenu"] = { fg = c.white, bg = c.none }, -- Popup menu: normal item.
     ["PmenuSel"] = { fg = c.bright_white, bg = c.gray03 }, -- Popup menu: selected item.
     ["PmenuSbar"] = { bg = c.gray02 }, -- Popup menu: scrollbar.
     ["PmenuThumb"] = { bg = c.gray03 }, -- Popup menu: Thumb of the scrollbar.
@@ -118,7 +118,7 @@ local set_groups = function()
     ["VisualNOS"] = { bg = c.gray02 }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     ["WarningMsg"] = { fg = c.yellow }, -- warning messages
     -- ["WildMenu"] = { fg = c.black, bg = c.blue }, -- current match in 'wildmenu' completion
-    ["WildMenu"] = { fg = c.black, bg = "none" }, -- current match in 'wildmenu' completion
+    ["WildMenu"] = { fg = c.black, bg = c.none }, -- current match in 'wildmenu' completion
     ["Winbar"] = { fg = c.white, bg = c.gray01 }, -- Winbar
     ["WinbarNC"] = { fg = c.gray05, bg = c.bg_dark }, -- Winbar non-current windows.
 
@@ -248,9 +248,9 @@ local set_groups = function()
     ["DiagnosticUnderlineWarn"] = { fg = c.yellow, underline = true },
     ["DiagnosticUnderlineInfo"] = { fg = c.blue, underline = true },
     ["DiagnosticUnderlineHint"] = { fg = c.cyan, underline = true },
-    ["DiagnosticVirtualTextWarn"] = { bg = "none" },
-    ["DiagnosticVirtualTextOk"] = { bg = "none" },
-    ["DiagnosticVirtualTextInfo"] = { bg = "none" },
+    ["DiagnosticVirtualTextWarn"] = { bg = c.none },
+    ["DiagnosticVirtualTextOk"] = { bg = c.none },
+    ["DiagnosticVirtualTextInfo"] = { bg = c.none },
 
     -- Neovim's built-in language server client
     ["LspReferenceWrite"] = { fg = c.blue, underline = true },
@@ -363,20 +363,20 @@ local set_groups = function()
     ["TelescopeMatching"] = { fg = c.yellow, underline = true },
 
     -- Oil
-    ["OilVcsStatusAdded"] = { bg = "none", fg = c.green },
-    ["OilVcsStatusCopied"] = { bg = "none", fg = c.white },
-    ["OilVcsStatusDeleted"] = { bg = "none", fg = c.cyan },
-    ["OilVcsStatusIgnored"] = { bg = "none", fg = c.black },
-    ["OilVcsStatusModified"] = { bg = "none", fg = c.yellow },
-    ["OilVcsStatusRenamed"] = { bg = "none", fg = c.red },
-    ["OilVcsStatusUntracked"] = { bg = "none", fg = c.blue },
-    ["OilVcsStatusUpstreamAdded"] = { bg = "none", c.green },
-    ["OilVcsStatusUpstreamCopied"] = { bg = "none", c.white },
-    ["OilVcsStatusUpstreamDeleted"] = { bg = "none", fg = c.cyan },
-    ["OilVcsStatusUpstreamIgnored"] = { bg = "none", fg = c.black },
-    ["OilVcsStatusUpstreamModified"] = { bg = "none", fg = c.yellow },
-    ["OilVcsStatusUpstreamRenamed"] = { bg = "none", fg = c.red },
-    ["OilVcsStatusUpstreamUntracked"] = { bg = "none", fg = c.blue },
+    ["OilVcsStatusAdded"] = { bg = c.none, fg = c.green },
+    ["OilVcsStatusCopied"] = { bg = c.none, fg = c.white },
+    ["OilVcsStatusDeleted"] = { bg = c.none, fg = c.cyan },
+    ["OilVcsStatusIgnored"] = { bg = c.none, fg = c.black },
+    ["OilVcsStatusModified"] = { bg = c.none, fg = c.yellow },
+    ["OilVcsStatusRenamed"] = { bg = c.none, fg = c.red },
+    ["OilVcsStatusUntracked"] = { bg = c.none, fg = c.blue },
+    ["OilVcsStatusUpstreamAdded"] = { bg = c.none, c.green },
+    ["OilVcsStatusUpstreamCopied"] = { bg = c.none, c.white },
+    ["OilVcsStatusUpstreamDeleted"] = { bg = c.none, fg = c.cyan },
+    ["OilVcsStatusUpstreamIgnored"] = { bg = c.none, fg = c.black },
+    ["OilVcsStatusUpstreamModified"] = { bg = c.none, fg = c.yellow },
+    ["OilVcsStatusUpstreamRenamed"] = { bg = c.none, fg = c.red },
+    ["OilVcsStatusUpstreamUntracked"] = { bg = c.none, fg = c.blue },
   }
 
   for name, val in pairs(highlights) do

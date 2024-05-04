@@ -248,9 +248,9 @@ local set_groups = function()
     ["DiagnosticUnderlineWarn"] = { fg = c.yellow, underline = true },
     ["DiagnosticUnderlineInfo"] = { fg = c.blue, underline = true },
     ["DiagnosticUnderlineHint"] = { fg = c.cyan, underline = true },
-    -- ["DiagnosticVirtualTextWarn"] = { bg = c.none },
-    -- ["DiagnosticVirtualTextOk"] = { bg = c.none },
-    -- ["DiagnosticVirtualTextInfo"] = { bg = c.none },
+    ["DiagnosticVirtualTextWarn"] = { bg = c.none },
+    ["DiagnosticVirtualTextOk"] = { bg = c.none },
+    ["DiagnosticVirtualTextInfo"] = { bg = c.none },
 
     -- Neovim's built-in language server client
     ["LspReferenceWrite"] = { fg = c.blue, underline = true },
@@ -366,20 +366,20 @@ local set_groups = function()
     ["TelescopeMatching"] = { fg = c.yellow, underline = true },
 
     -- Oil
-    ["OilVcsStatusAdded"] = { bg = c.none, fg = c.green },
-    ["OilVcsStatusCopied"] = { bg = c.none, fg = c.white },
-    ["OilVcsStatusDeleted"] = { bg = c.none, fg = c.cyan },
-    ["OilVcsStatusIgnored"] = { bg = c.none, fg = c.black },
-    ["OilVcsStatusModified"] = { bg = c.none, fg = c.yellow },
-    ["OilVcsStatusRenamed"] = { bg = c.none, fg = c.red },
-    ["OilVcsStatusUntracked"] = { bg = c.none, fg = c.blue },
-    ["OilVcsStatusUpstreamAdded"] = { bg = c.none, c.green },
-    ["OilVcsStatusUpstreamCopied"] = { bg = c.none, c.white },
-    ["OilVcsStatusUpstreamDeleted"] = { bg = c.none, fg = c.cyan },
-    ["OilVcsStatusUpstreamIgnored"] = { bg = c.none, fg = c.black },
-    ["OilVcsStatusUpstreamModified"] = { bg = c.none, fg = c.yellow },
-    ["OilVcsStatusUpstreamRenamed"] = { bg = c.none, fg = c.red },
-    ["OilVcsStatusUpstreamUntracked"] = { bg = c.none, fg = c.blue },
+    -- ["OilVcsStatusAdded"] = { bg = c.none, fg = c.green },
+    -- ["OilVcsStatusCopied"] = { bg = c.none, fg = c.white },
+    -- ["OilVcsStatusDeleted"] = { bg = c.none, fg = c.cyan },
+    -- ["OilVcsStatusIgnored"] = { bg = c.none, fg = c.black },
+    -- ["OilVcsStatusModified"] = { bg = c.none, fg = c.yellow },
+    -- ["OilVcsStatusRenamed"] = { bg = c.none, fg = c.red },
+    -- ["OilVcsStatusUntracked"] = { bg = c.none, fg = c.blue },
+    -- ["OilVcsStatusUpstreamAdded"] = { bg = c.none, c.green },
+    -- ["OilVcsStatusUpstreamCopied"] = { bg = c.none, c.white },
+    -- ["OilVcsStatusUpstreamDeleted"] = { bg = c.none, fg = c.cyan },
+    -- ["OilVcsStatusUpstreamIgnored"] = { bg = c.none, fg = c.black },
+    -- ["OilVcsStatusUpstreamModified"] = { bg = c.none, fg = c.yellow },
+    -- ["OilVcsStatusUpstreamRenamed"] = { bg = c.none, fg = c.red },
+    -- ["OilVcsStatusUpstreamUntracked"] = { bg = c.none, fg = c.blue },
   }
 
   for name, val in pairs(highlights) do

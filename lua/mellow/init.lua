@@ -282,7 +282,7 @@ local set_groups = function()
     ["HopPreview"] = { fg = c.bright_blue },
 
     -- Flash
-    ["FlashLabel"] = { fg = c.bright_yellow },
+    ["FlashLabel"] = { fg = c.cyan },
 
     -- Cmp
     ["CmpItemAbbrDeprecated"] = { fg = c.gray06, strikethrough = true },
@@ -355,31 +355,31 @@ local set_groups = function()
     ["NeoTreeTitleBar"] = { fg = c.gray05, bg = c.gray01 },
 
     -- Telescope
-    ["TelescopeBorder"] = { fg = c.bg, bg = c.bg },
-    ["TelescopeNormal"] = { fg = c.fg, bg = c.bg },
-    ["TelescopePreviewTitle"] = { fg = c.black, bg = c.green, bold = true },
-    ["TelescopeResultsTitle"] = { fg = c.bg, bg = c.bg },
-    ["TelescopePromptTitle"] = { fg = c.black, bg = c.cyan, bold = true },
-    ["TelescopePromptBorder"] = { fg = c.gray01, bg = c.gray01 },
-    ["TelescopePromptNormal"] = { fg = c.gray06, bg = c.gray01 },
-    ["TelescopePromptCounter"] = { fg = c.gray04, bg = c.gray01 },
+    ["TelescopeBorder"] = { fg = c.bg, bg = cfg.transparent and c.none or c.bg },
+    ["TelescopeNormal"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg },
+    ["TelescopePreviewTitle"] = { fg = c.black, bg = cfg.transparent and c.none or c.green, bold = true },
+    ["TelescopeResultsTitle"] = { fg = c.bg, bg = cfg.transparent and c.none or c.bg },
+    ["TelescopePromptTitle"] = { fg = c.black, bg = cfg.transparent and c.none or c.cyan, bold = true },
+    ["TelescopePromptBorder"] = { fg = c.gray01, bg = cfg.transparent and c.none or c.gray01 },
+    ["TelescopePromptNormal"] = { fg = c.gray06, bg = cfg.transparent and c.none or c.gray01 },
+    ["TelescopePromptCounter"] = { fg = c.gray04, bg = cfg.transparent and c.none or c.gray01 },
     ["TelescopeMatching"] = { fg = c.yellow, underline = true },
 
     -- Oil
-    -- ["OilVcsStatusAdded"] = { bg = c.none, fg = c.green },
-    -- ["OilVcsStatusCopied"] = { bg = c.none, fg = c.white },
-    -- ["OilVcsStatusDeleted"] = { bg = c.none, fg = c.cyan },
-    -- ["OilVcsStatusIgnored"] = { bg = c.none, fg = c.black },
-    -- ["OilVcsStatusModified"] = { bg = c.none, fg = c.yellow },
-    -- ["OilVcsStatusRenamed"] = { bg = c.none, fg = c.red },
-    -- ["OilVcsStatusUntracked"] = { bg = c.none, fg = c.blue },
-    -- ["OilVcsStatusUpstreamAdded"] = { bg = c.none, c.green },
-    -- ["OilVcsStatusUpstreamCopied"] = { bg = c.none, c.white },
-    -- ["OilVcsStatusUpstreamDeleted"] = { bg = c.none, fg = c.cyan },
-    -- ["OilVcsStatusUpstreamIgnored"] = { bg = c.none, fg = c.black },
-    -- ["OilVcsStatusUpstreamModified"] = { bg = c.none, fg = c.yellow },
-    -- ["OilVcsStatusUpstreamRenamed"] = { bg = c.none, fg = c.red },
-    -- ["OilVcsStatusUpstreamUntracked"] = { bg = c.none, fg = c.blue },
+    OilVcsStatusAdded = { bg = c.none, fg = c.green },
+    OilVcsStatusCopied = { bg = c.none, fg = c.white },
+    OilVcsStatusDeleted = { bg = c.none, fg = c.cyan },
+    OilVcsStatusIgnored = { bg = c.none, fg = c.black },
+    OilVcsStatusModified = { bg = c.none, fg = c.yellow },
+    OilVcsStatusRenamed = { bg = c.none, fg = c.red },
+    OilVcsStatusUntracked = { bg = c.none, fg = c.blue },
+    OilVcsStatusUpstreamAdded = { bg = c.none, c.green },
+    OilVcsStatusUpstreamCopied = { bg = c.none, c.white },
+    OilVcsStatusUpstreamDeleted = { bg = c.none, fg = c.cyan },
+    OilVcsStatusUpstreamIgnored = { bg = c.none, fg = c.black },
+    OilVcsStatusUpstreamModified = { bg = c.none, fg = c.yellow },
+    OilVcsStatusUpstreamRenamed = { bg = c.none, fg = c.red },
+    OilVcsStatusUpstreamUntracked = { bg = c.none, fg = c.blue },
   }
 
   for name, val in pairs(highlights) do

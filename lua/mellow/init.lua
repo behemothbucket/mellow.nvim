@@ -88,9 +88,12 @@ local set_groups = function()
     ["NonText"] = { fg = c.gray02 }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
     ["Normal"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text
     ["NormalNC"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg_dark }, -- normal text
-    ["NormalFloat"] = { fg = c.white, bg = c.gray00 }, -- Normal text in floating windows.
-    ["FloatBorder"] = { fg = c.gray03, bg = c.bg }, -- Border of floating windows.
-    ["Pmenu"] = { fg = c.white, bg = c.black }, -- Popup menu: normal item.
+    -- ["NormalFloat"] = { fg = c.white, bg = c.gray00 }, -- Normal text in floating windows.
+    ["NormalFloat"] = { fg = c.white, bg = "none" }, -- Normal text in floating windows.
+    -- ["FloatBorder"] = { fg = c.gray03, bg = c.bg }, -- Border of floating windows.
+    ["FloatBorder"] = { fg = c.gray03, bg = "none" }, -- Border of floating windows.
+    -- ["Pmenu"] = { fg = c.white, bg = c.black }, -- Popup menu: normal item.
+    ["Pmenu"] = { fg = c.white, bg = "none" }, -- Popup menu: normal item.
     ["PmenuSel"] = { fg = c.bright_white, bg = c.gray03 }, -- Popup menu: selected item.
     ["PmenuSbar"] = { bg = c.gray02 }, -- Popup menu: scrollbar.
     ["PmenuThumb"] = { bg = c.gray03 }, -- Popup menu: Thumb of the scrollbar.
@@ -114,7 +117,8 @@ local set_groups = function()
     ["Visual"] = { bg = c.gray02 }, -- Visual mode selection
     ["VisualNOS"] = { bg = c.gray02 }, -- Visual mode selection when vim is "Not Owning the Selection". Only X11 Gui's gui-x11 and xterm-clipboard supports this.
     ["WarningMsg"] = { fg = c.yellow }, -- warning messages
-    ["WildMenu"] = { fg = c.black, bg = c.blue }, -- current match in 'wildmenu' completion
+    -- ["WildMenu"] = { fg = c.black, bg = c.blue }, -- current match in 'wildmenu' completion
+    ["WildMenu"] = { fg = c.black, bg = "none" }, -- current match in 'wildmenu' completion
     ["Winbar"] = { fg = c.white, bg = c.gray01 }, -- Winbar
     ["WinbarNC"] = { fg = c.gray05, bg = c.bg_dark }, -- Winbar non-current windows.
 
@@ -244,6 +248,9 @@ local set_groups = function()
     ["DiagnosticUnderlineWarn"] = { fg = c.yellow, underline = true },
     ["DiagnosticUnderlineInfo"] = { fg = c.blue, underline = true },
     ["DiagnosticUnderlineHint"] = { fg = c.cyan, underline = true },
+    ["DiagnosticVirtualTextWarn"] = { bg = "none" },
+    ["DiagnosticVirtualTextOk"] = { bg = "none" },
+    ["DiagnosticVirtualTextInfo"] = { bg = "none" },
 
     -- Neovim's built-in language server client
     ["LspReferenceWrite"] = { fg = c.blue, underline = true },
@@ -354,6 +361,22 @@ local set_groups = function()
     ["TelescopePromptNormal"] = { fg = c.gray06, bg = c.gray01 },
     ["TelescopePromptCounter"] = { fg = c.gray04, bg = c.gray01 },
     ["TelescopeMatching"] = { fg = c.yellow, underline = true },
+
+    -- Oil
+    ["OilVcsStatusAdded"] = { bg = "none", fg = c.green },
+    ["OilVcsStatusCopied"] = { bg = "none", fg = c.white },
+    ["OilVcsStatusDeleted"] = { bg = "none", fg = c.cyan },
+    ["OilVcsStatusIgnored"] = { bg = "none", fg = c.black },
+    ["OilVcsStatusModified"] = { bg = "none", fg = c.yellow },
+    ["OilVcsStatusRenamed"] = { bg = "none", fg = c.red },
+    ["OilVcsStatusUntracked"] = { bg = "none", fg = c.blue },
+    ["OilVcsStatusUpstreamAdded"] = { bg = "none", c.green },
+    ["OilVcsStatusUpstreamCopied"] = { bg = "none", c.white },
+    ["OilVcsStatusUpstreamDeleted"] = { bg = "none", fg = c.cyan },
+    ["OilVcsStatusUpstreamIgnored"] = { bg = "none", fg = c.black },
+    ["OilVcsStatusUpstreamModified"] = { bg = "none", fg = c.yellow },
+    ["OilVcsStatusUpstreamRenamed"] = { bg = "none", fg = c.red },
+    ["OilVcsStatusUpstreamUntracked"] = { bg = "none", fg = c.blue },
   }
 
   for name, val in pairs(highlights) do

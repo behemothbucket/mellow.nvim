@@ -86,8 +86,8 @@ local set_groups = function()
     ["ModeMsg"] = { fg = c.gray03, bold = true }, --' showmode' message (e.g., "-- INSERT --")
     ["MoreMsg"] = { fg = c.bright_magenta }, -- more-prompt
     ["NonText"] = { fg = c.gray02 }, --'~' and '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line).
-    -- ["Normal"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text
-    ["Normal"] = { fg = c.fg, bg = c.bg }, -- normal text
+    ["Normal"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg }, -- normal text
+    -- ["Normal"] = { fg = c.fg, bg = c.bg }, -- normal text
     ["NormalNC"] = { fg = c.fg, bg = cfg.transparent and c.none or c.bg_dark }, -- normal text
     -- ["NormalFloat"] = { fg = c.white, bg = c.gray00 }, -- Normal text in floating windows.
     ["NormalFloat"] = { fg = c.white, bg = cfg.transparent and c.none or c.bg }, -- Normal text in floating windows.
